@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Administrasi | PT Epson Indonesia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --epson-blue: #003399; /* Warna Identitas Epson */
+            --epson-light: #0055ff;
+            --white: #ffffff;
+            --soft-gray: #f8f9fa;
+            --text-dark: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+        /* --- Header & Nav --- */
+        header {
+            background-color: var(--white);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-container img {
+            height: 35px; /* Logo Epson */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--epson-blue);
+            font-weight: 600;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--epson-light); }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--epson-blue) 0%, #001a4d 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            color: var(--white);
+            padding-top: 80px;
+        }
+
+        .hero-content { max-width: 600px; }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero-content p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+
+        .btn-cv {
+            padding: 12px 30px;
+            background: var(--white);
+            color: var(--epson-blue);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-cv:hover { background: #e0e0e0; transform: translateY(-3px); }
+
+        /* --- Keahlian Teknis (Section) --- */
+        .section { padding: 80px 8%; }
+        .section-title {
+            text-align: center;
+            color: var(--epson-blue);
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: var(--soft-gray);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border-bottom: 5px solid var(--epson-blue);
+            transition: 0.4s;
+        }
+
+        .skill-card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .skill-card i { font-size: 2.5rem; color: var(--epson-blue); margin-bottom: 15px; }
+
+        /* --- Contact & Sosmed --- */
+        .contact-container {
+            background: var(--soft-gray);
+            border-radius: 15px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-item { margin-bottom: 20px; display: flex; align-items: center; }
+        .info-item i { width: 40px; height: 40px; background: var(--epson-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; }
+
+        .social-links { margin-top: 20px; }
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--epson-blue);
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+        .social-links a:hover { color: var(--epson-light); }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--epson-blue);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            nav { display: none; } /* Sederhana untuk mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo epson.png" alt="Epson Logo">
+        </div>
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#skills">Keahlian</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p style="text-transform: uppercase; letter-spacing: 2px;">Professional Portfolio</p>
+            <h1>hallo mutiara naila hakim</h1>
+            <p>Berkomitmen mendukunng efisiensi operasional PT Epson Indonesia melalui manajemen data yang akurat dan pengarsipan yang sistematis.</p>
+            <a href="#contact" class="btn-cv">Hubungi Saya</a>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <h2 class="section-title">Keahlian Teknis</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-file-excel"></i>
+                <h3>Advanced Excel</h3>
+                <p>Pivot Table, VLOOKUP/HLOOKUP, dan otomasi laporan administrasi.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Sistem ERP / SAP</h3>
+                <p>Input data inventaris dan manajemen stok secara akurat di sistem perusahaan.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-archive"></i>
+                <h3>Filling System</h3>
+                <p>Manajemen pengarsipan dokumen digital dan fisik sesuai standar ISO.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-users-cog"></i>
+                <h3>Coordination</h3>
+                <p>Mengatur jadwal rapat dan koordinasi lintas departemen (Produksi & Logistik).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact" style="padding-top: 0;">
+        <h2 class="section-title">Informasi Kontak</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Mari Terhubung</h3>
+                <p style="margin-bottom: 25px;">Saya siap memberikan kontribusi terbaik untuk efisiensi administrasi di lingkungan industri.</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>mutiara23@email.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+62 87787588210</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cikarang, Bekasi (Kawasan Industri EJIP)</span>
+                </div>
+            </div>
+            
+            <div class="social-box">
+                <h3>Media Sosial</h3>
+                <p>Temukan profil profesional saya di platform berikut:</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Administration Portfolio - PT Epson Indonesia Team Support</p>
+    </footer>
+
+    <script>
+        // Efek Scroll Animasi untuk Skill Cards
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.skill-card');
+            const triggerBottom = window.innerHeight / 5 * 4;
+
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                if(cardTop < triggerBottom) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Inisialisasi opacity untuk animasi
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+        });
+    </script>
+</body>
+</html>

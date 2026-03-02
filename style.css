@@ -1,0 +1,83 @@
+/* --- Penambahan & Perubahan CSS --- */
+:root {
+    --epson-blue: #003399;
+    --epson-light: #00a1e4;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.2);
+}
+
+/* Efek Gradient pada Background Hero */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 51, 153, 0.9) 0%, rgba(0, 161, 228, 0.8) 100%), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efek Parallax */
+}
+
+/* Navbar yang Berubah Saat Scroll */
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 10px 8%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Card Animasi & Glassmorphism */
+.skill-card {
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 51, 153, 0.05), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+.skill-card:hover {
+    border-bottom-color: var(--epson-light);
+    transform: translateY(-12px) scale(1.02);
+}
+
+/* Tombol dengan Efek Glow */
+.btn-cv {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-cv:hover {
+    box-shadow: 0 6px 25px rgba(0, 161, 228, 0.4);
+    background: var(--epson-light);
+    color: white;
+}
+
+/* Indikator Progress Keahlian (Visual Tambahan) */
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.skill-per {
+    height: 100%;
+    background: var(--epson-blue);
+    width: 0; /* Akan diisi oleh JS */
+    transition: 1.5s ease-in-out;
+}
